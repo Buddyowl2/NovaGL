@@ -1,0 +1,34 @@
+{
+  "engine": "NovaGL-3D",
+  "version": "1.0",
+  "compatible_extensions": [".nova", ".novaL", ".novaGL"],
+  "dictionary": {
+    "--- 3D OBJECTS (ROBLOX STYLE) ---": {},
+    "gl:create_part": { "params": ["id", "shape", "x", "y", "z", "color"], "shapes": ["block", "ball", "wedge", "cylinder"] },
+    "gl:set_material": { "params": ["id", "material"], "types": ["plastic", "neon", "glass", "wood", "metal"] },
+    "gl:set_size": { "params": ["id", "width", "height", "depth"] },
+    "gl:anchor": { "params": ["id", "boolean"], "desc": "True stays in air, False falls with gravity" },
+    
+    "--- 2D GUI (HUD & HUD ELEMENTS) ---": {},
+    "nova:create_button": { "params": ["id", "x", "y", "z", "roundness", "width", "height"] },
+    "nova:create_text_adv": { "params": ["id", "content", "x", "y", "z", "font", "size", "weight", "color"] },
+    "nova:progress_bar": { 
+      "params": ["id", "x", "y", "width", "height", "bg_color", "fill_color", "value"],
+      "usage": "Perfect for Health, Stamina, or Loading" 
+    },
+    "nova:update_progress": { "params": ["id", "new_value"], "desc": "0 to 100 percentage" },
+    "nova:set_opacity": { "params": ["id", "value"] },
+    
+    "--- PHYSICS & GAMEPLAY ---": {},
+    "gl:phys_gravity": { "params": ["strength"] },
+    "gl:phys_velocity": { "params": ["id", "x_vel", "y_vel", "z_vel"] },
+    "gl:set_spawn": { "params": ["x", "y", "z"] },
+    "gl:on_touched": { "params": ["id", "function_name"], "desc": "Trigger logic when player hits part" },
+    
+    "--- SYSTEM & LOG ---": {},
+    "nova:save_data": { "params": ["key", "value"] },
+    "nova:load_data": { "params": ["key"] },
+    "nova:command_log_adv": { "params": ["message", "variable_name"] },
+    "nova:system_reset": { "params": [] }
+  }
+}
